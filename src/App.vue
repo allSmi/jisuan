@@ -52,7 +52,9 @@
       </el-row>
       <el-row :gutter="20">
         <el-col :span="4">
-          <div class="grid-content bg-purple-light">{{item.currentNum * item.currentPrice }}</div>
+          <div
+            class="grid-content bg-purple-light"
+          >{{Math.round(item.currentNum * item.currentPrice) }}</div>
         </el-col>
         <el-col :span="4">
           <div class="grid-content bg-purple-light">{{item.actualPrice}}</div>
@@ -60,10 +62,10 @@
         <el-col :span="4">
           <div
             class="grid-content bg-purple"
-          >{{item.currentNum * item.currentPrice - item.actualPrice}}</div>
+          >{{Math.round(item.currentNum * item.currentPrice - item.actualPrice)}}</div>
         </el-col>
       </el-row>
-      <el-row>当前市值：{{item.currentNum}} * {{item.currentPrice}} = {{item.currentNum * item.currentPrice }}</el-row>
+      <el-row>当前市值：{{item.currentNum}} * {{item.currentPrice}} = {{Math.round(item.currentNum * item.currentPrice) }}</el-row>
       <el-row>
         <el-col :span="4">如果想盈利</el-col>
         <el-col :span="4">下一日涨幅如果为</el-col>
@@ -84,7 +86,7 @@
         <el-col
           :span="4"
           v-if="item.nextDayPercent"
-        >{{-(item.currentNum * item.currentPrice -item.actualPrice) / Number(item.nextDayPercent) -item.actualPrice}}</el-col>
+        >{{Math.round(-(item.currentNum * item.currentPrice -item.actualPrice) / Number(item.nextDayPercent) -item.actualPrice,0)}}</el-col>
       </el-row>
     </div>
   </div>
