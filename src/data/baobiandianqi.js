@@ -1,6 +1,6 @@
 export default {
   title: "保变电气",
-  currentPrice: 6,
+  currentPrice: 5.64,
   step: 0.01,
   currentNum: null,
   actualPrice: null,
@@ -9,16 +9,26 @@ export default {
   allPercent: [],
   detail: [
     {
+      time: "3月19日",
+      end: 40.83, // 收盘价
+      buyAndSale: [
+        {
+          buyPrice: 7.12, // 买入价
+          buyNum: 1500 // 买入数量
+        }
+      ]
+    },
+    {
       time: "3月22日",
       end: 40.83, // 收盘价
       buyAndSale: [
         {
-          buyPrice: 6, // 买入价
-          buyNum: 3200 // 买入数量
-        },
-        {
           buyPrice: 6.24, // 买入价
           buyNum: 1500 // 买入数量
+        },
+        {
+          buyPrice: 6.34, // 买入价
+          buyNum: -1500 // 买入数量
         }
       ]
     },
@@ -29,6 +39,24 @@ export default {
         {
           buyPrice: 6, // 买入价
           buyNum: 3200 // 买入数量
+        }
+      ]
+    },
+    {
+      time: "3月24日",
+      end: 40.83, // 收盘价
+      buyAndSale: [
+        {
+          buyPrice: 5.41, // 买入价
+          buyNum: 4000 // 买入数量
+        },
+        {
+          buyPrice: 5.59, // 买入价
+          buyNum: -2000 // 买入数量
+        },
+        {
+          buyPrice: 5.54, // 买入价
+          buyNum: -2000 // 买入数量
         }
       ]
     }
