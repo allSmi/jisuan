@@ -1,7 +1,7 @@
 export default {
     title: "保变电气",
     px: "baobiandianqi",
-    currentPrice: 5.86,
+    currentPrice: 5.53,
     step: 0.01,
     currentNum: null,
     actualPrice: null,
